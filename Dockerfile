@@ -2,7 +2,7 @@
 # to build, use `docker build -t bonita/ui-designer .`
 # to run on random port, use `docker run -p 8080 bonita/ui-designer`
 # to run on a fixed port, 8000 for example, use `docker run -p 8000:8080 bonita/ui-designer`
-FROM openjdk:8-jre-alpine
+FROM resin/raspberry-pi-alpine-openjdk:openjdk-8-jre-20181021
 EXPOSE 8080
 WORKDIR /data
 ADD ./backend/webapp/target/ui-designer-1.7-SNAPSHOT-standalone.jar /data/ui-designer-standalone.jar
